@@ -10,6 +10,7 @@ urlpatterns = [
     path('time2/', views.current_datetime_2),
 
     path('isitchristmas/', views.is_it_christmas),
+    path('isitmonday/', views.is_it_monday),
 
     # Konwerter scieżki:
     # <typ_zmiennej:nazwa_zmiennej>

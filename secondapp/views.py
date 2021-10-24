@@ -77,3 +77,20 @@ def is_it_christmas(request):
             'christmas': is_it_christmas,
         }
     )
+
+
+def is_it_monday(request):
+
+    is_it_monday = False
+
+    now = datetime.now()
+    if now.weekday() ==0:
+        is_it_monday = True
+
+    return render(
+        request,
+        'secondapp/isitmonday.html',
+        context={
+            'monday': is_it_monday,
+        }
+    )

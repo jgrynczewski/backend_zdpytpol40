@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Czy mamy poniedziałek</title>
+    <link rel="stylesheet" href='{% static "secondapp/style.css" %}'>
+<!--&lt;!&ndash;    Block css&ndash;&gt;-->
+<!--    <style>-->
+<!--        h1 {-->
+<!--            font-size: 90px;-->
+<!--            font-weight: bold;-->
+<!--            text-align: center;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+    {% if monday %}
+        <h1>TAK</h1>
+    {% else %}
+<!--        &lt;!&ndash;In-line css&ndash;&gt;-->
+<!--        <h1 style="font-size: 90px; font-weight: bold; text-align: center;">NIE</h1>-->
+        <h1>NIE</h1>
+    {% endif %}
+</body>
+</html>
