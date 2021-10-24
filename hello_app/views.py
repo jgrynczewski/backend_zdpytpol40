@@ -14,13 +14,13 @@ def hello_2(request):
 def hello_3(request):
     return render(
         request,
-        'hello.html'
+        'hello_app/hello.html'
     )
 
 
 def welcome(request):
     return render(
         request,
-        'welcome.html'
+        'hello_app/welcome.html'
     )
 
