@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 
-# from .views import hello - tak nie robimy
+# from .views import hello  # - tak nie robimy
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('moja/', hello)  # antywzorzec - tak nie robimy - zamiast
+    # path('moja/', hello),  # antywzorzec - tak nie robimy - zamiast
     # tego dla widoków tworzymy aplikacje.
     path('hello/', include('hello_app.urls')),
 ]

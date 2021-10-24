@@ -3,5 +3,6 @@ from django.urls import path
 from hello_app import views
 
 urlpatterns = [
-    path('', views.hello)
+    path('pierwsze', views.hello),
+    path('drugie', views.hello_2)
 ]
