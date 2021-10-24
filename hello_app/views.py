@@ -17,13 +17,10 @@ def hello_3(request):
         'hello.html'
     )
 
-def hello_adam(request):
-    return HttpResponse("Witaj, Adam!")
 
+def welcome(request):
+    return render(
+        request,
+        'welcome.html'
+    )
 
-def hello_ewa(request):
-    return HttpResponse("Witaj, Ewa!")
-
-
-def hello_name(request, name):
-    return HttpResponse(f"Witaj {name}")

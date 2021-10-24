@@ -24,4 +24,5 @@ urlpatterns = [
     # path('moja/', hello),  # antywzorzec - tak nie robimy - zamiast
     # tego dla widoków tworzymy aplikacje.
     path('hello/', include('hello_app.urls')),
+    path('secondapp/', include('secondapp.urls')),
 ]
