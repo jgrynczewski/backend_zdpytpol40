@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.shortcuts import HttpResponse
 
 
@@ -9,6 +10,12 @@ def hello(request):
 def hello_2(request):
     return HttpResponse("<!DOCTYPE html><html><head></head><body><h3>Witaj, świecie!</h3></body></html>")
 
+
+def hello_3(request):
+    return render(
+        request,
+        'hello.html'
+    )
 
 def hello_adam(request):
     return HttpResponse("Witaj, Adam!")

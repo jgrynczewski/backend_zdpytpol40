@@ -5,6 +5,7 @@ from hello_app import views
 urlpatterns = [
     path('pierwsze', views.hello),
     path('drugie', views.hello_2),
+    path('trzecie', views.hello_3),
 
     path('adam', views.hello_adam),
     path('ewa', views.hello_ewa),
