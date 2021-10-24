@@ -5,3 +5,6 @@ from django.shortcuts import HttpResponse
 # (http request), a zwraca odpowiedź http (http response)
 def hello(request):  # -> HttpResponse
     return HttpResponse("Witaj, świecie")
+
+# Ale to jest antywzorzec.
+# W Django kod umieszczamy w aplikacjach Django.
