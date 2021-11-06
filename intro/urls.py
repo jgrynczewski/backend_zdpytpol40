@@ -19,10 +19,12 @@ from django.urls import include
 
 # from .views import hello  # - tak nie robimy
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('moja/', hello),  # antywzorzec - tak nie robimy - zamiast
     # tego dla widoków tworzymy aplikacje.
     path('hello/', include('hello_app.urls')),
     path('secondapp/', include('secondapp.urls')),
+    path('review/', include('review.urls')),
 ]
