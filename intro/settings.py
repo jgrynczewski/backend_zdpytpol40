@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'hello_app',
     'secondapp',
     'review',
+    'draw',
 ]
 
 MIDDLEWARE = [
