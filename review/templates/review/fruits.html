@@ -1,0 +1,64 @@
+{% load custom_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{ fruits }}
+    {% for fruit in fruits %}
+        <h3>{{ fruit }}</h3>
+    {% endfor %}
+
+    <!-- Komentarze w języku szablonów Django -->
+
+    <!-- Jednolinikowe -->
+    <!-- To nie działa -->
+    {# {{ len(fruits) }} #}
+    {# {{ ", ".join(fruits) }} #}
+    <!-- więc zakomentowaliśmy - {# #} -->
+
+    <!-- Wielolinijkowe -->
+    {% comment %}
+    {% endcomment %}
+
+    <p>{{ fruits|length }}</p>
+    {{ fruits|join:", " }}
+
+    <p>{{ fruits|length|add:"2"}}</p>
+
+    {% for fruit in fruits %}
+        <p>{{ fruit|upper }}</p>
+        <p>{{ fruit|capfirst }}</p>
+        <p>{{ fruit|cut:"a" }}</p>
+    {% endfor %}
+
+    <!-- Notacja z kropką -->
+    <!-- Jak odwołać się do elementów listy -->
+    {# {{ fruits[0] }} - nie działa #}
+    <p>{{ fruits.0 }}<p></p>  <!-- .<indeks> -->
+
+    <!-- Jak odwoływać się po kluczu do elementów słownika -->
+    {# {{ passenger['name'] }} - nie dziala #}
+    <p>{{ passenger.name }}</p> <!-- .<klucz> -->
+
+    <!-- Jak odwoływać się do atrybutu obiektu -->
+    <p>{{ dog.name }}</p>
+
+    <!-- To nie działa -->
+    {% comment %}
+    {% for idx, fruit in enumerate(fruits) %}
+        {{ fruits }}
+    {% endfor %}
+    {% endcomment %}
+
+    {% for fruit in fruits %}
+        <p>{{ forloop }}</p>
+        <p>{{ forloop.counter0 }} {{ forloop.counter }} {{ forloop.first }} {{ forloop.last }}</p>
+    {% endfor %}
+
+    {{ text|safe }}
+    {{ text|trim }}
+</body>
+</html>

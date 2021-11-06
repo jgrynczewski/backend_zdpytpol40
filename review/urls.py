@@ -5,5 +5,6 @@ from review import views
 
 urlpatterns = [
     path('hello/', views.hello),
-    path('isitmonday', views.is_it_monday),
+    path('isitmonday/', views.is_it_monday),
+    path('fruits/', views.fruits),
 ]

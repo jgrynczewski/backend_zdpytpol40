@@ -22,3 +22,36 @@ def is_it_monday(request):
             "is_monday": is_monday,
         }
     )
+
+
+def fruits(request):
+
+    fruits = [
+        'ananas',
+        'banan',
+        'mandarynka',
+        'cytryna',
+    ]
+
+    passenger = {
+        'id': 12345,
+        'name': "Adam",
+        'age': 20,
+    }
+
+    class Dog:
+        def __init__(self, name):
+            self.name = name
+
+    dog = Dog("Azor")
+
+    return render(
+        request,
+        'review/fruits.html',
+        context={
+            'fruits': fruits,
+            'passenger': passenger,
+            'dog': dog,
+            'text': '<p style="color:red;">hello</p>',
+        }
+    )
