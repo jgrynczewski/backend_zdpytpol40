@@ -28,4 +28,5 @@ urlpatterns = [
     path('secondapp/', include('secondapp.urls')),
     path('review/', include('review.urls')),
     path('draw/', include('draw.urls')),
+    path('links/', include('links.urls')),
 ]

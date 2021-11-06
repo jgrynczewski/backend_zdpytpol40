@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'secondapp',
     'review',
     'draw',
+    'links',
 ]
 
 MIDDLEWARE = [
