@@ -29,4 +29,5 @@ urlpatterns = [
     path('review/', include('review.urls')),
     path('draw/', include('draw.urls')),
     path('links/', include('links.urls')),
+    path('inheritance/', include('inheritance.urls')),
 ]

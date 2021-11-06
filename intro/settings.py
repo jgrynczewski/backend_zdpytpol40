@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'review',
     'draw',
     'links',
+    'inheritance',
 ]
 
 MIDDLEWARE = [
