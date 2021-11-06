@@ -1,14 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Poniedziałek</title>
+    <link rel="stylesheet" href='{% static "review/style.css" %}'>
+    <script src='{% static "review/script.js" %}'></script>
 </head>
 <body>
     {% if is_monday %}
         <div style="color: blue;">TAK</div>
     {% else %}
         <div style="color: red;">NIE</div>
+        <center>
+            <img src='{% static "review/monday.jpg" %}'>
+        </center>
     {% endif %}
 </body>
 </html>

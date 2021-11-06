@@ -5,6 +5,10 @@
     <title>Losowanie</title>
 </head>
 <body>
-    {{ random_list }}
+    <ul>
+    {% for number in random_list %}
+        <li>{{ number }}</li>
+    {% endfor %}
+    </ul>
 </body>
 </html>

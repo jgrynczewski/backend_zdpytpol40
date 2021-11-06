@@ -11,10 +11,9 @@ def hello(request):
 
 
 def is_it_monday(request):
-    is_monday = False
+
     weekday = datetime.now().weekday()
-    if weekday == 0:
-        is_monday = True
+    is_monday = True if weekday == 0 else False
 
     return render(
         request,
