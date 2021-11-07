@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'draw',
     'links',
     'inheritance',
+    'user_data',
 ]
 
 MIDDLEWARE = [
