@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Formularz GET</title>
+    <title>Formularz POST</title>
 </head>
 <body>
-    <form>
+    <form method="POST">
+        {% csrf_token %}
         <input type="text" name="task" placeholder="Zadanie">
         <input type="submit" value="Zarejestruj">
     </form>
 
-    <br/>
+    <br>
     Zadania do zrealizowania:
     <ul>
         {% for task in tasks %}

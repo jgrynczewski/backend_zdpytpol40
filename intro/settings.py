@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'inheritance',
     'user_data',
     'formapp',
+    'formapp_2',
 ]
 
 MIDDLEWARE = [
