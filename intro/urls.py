@@ -31,4 +31,5 @@ urlpatterns = [
     path('links/', include('links.urls')),
     path('inheritance/', include('inheritance.urls')),
     path('user-data/', include('user_data.urls')),
+    path('form/', include('formapp.urls')),
 ]
