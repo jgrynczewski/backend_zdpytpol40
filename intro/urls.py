@@ -34,4 +34,5 @@ urlpatterns = [
     path('form/', include('formapp.urls')),
     path('form2/', include('formapp_2.urls')),
     path('form3/', include('formapp_3.urls')),
+    path('form4/', include('formapp_4.urls')),
 ]

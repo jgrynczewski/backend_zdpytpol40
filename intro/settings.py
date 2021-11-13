@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'formapp',
     'formapp_2',
     'formapp_3',
+    'formapp_4',
 ]
 
 MIDDLEWARE = [
