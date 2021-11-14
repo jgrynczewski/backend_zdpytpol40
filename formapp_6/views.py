@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.shortcuts import Http404
 from django.shortcuts import get_object_or_404
+from django.views.decorators.http import require_http_methods
+
 from django.core.exceptions import ObjectDoesNotExist
 
 from formapp_6.models import Task
@@ -34,6 +36,7 @@ def tasks_list(request):
     )
 
 
+@require_http_methods(["GET", "POST"])
 def update(request, id):
     # try:
     #     task = Task.objects.get(id=id)
@@ -60,9 +63,9 @@ def update(request, id):
     )
 
 
+@require_http_methods(["POST"])
 def delete(request, id):
-    if request.method == "POST":
-        task = get_object_or_404(Task, id=id)
-        task.delete()
+    task = get_object_or_404(Task, id=id)
+    task.delete()
 
     return redirect('formapp_6:tasks-list')

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz 1</title>
+    <script>
+        function validate() {
+            var category = document.getElementById("category").value
+            if ( category == "other" || category == "question") {
+                return true;
+            }
+            else {
+                alert("Zła wartość parametru category.")
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="POST" onsubmit="return validate();">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Imię">
+        <input type="email" name="email" placeholder="E-mail">
+
+        <select name="category" id="category">
+            <option value="" selected>----------</option>
+            <option value="question">Pytanie</option>
+            <option value="other">Inne</option>
+        </select>
+
+        <input type="text" name="subject" placeholder="Tytuł">
+        <input type="text" name="body" placeholder="Treść">
+
+        <input type="submit" value="Prześlij">
+    </form>
+</body>
+</html>
