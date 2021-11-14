@@ -12,6 +12,10 @@
                 <a href="{% url 'formapp_6:update' task.id %}">
                     {{ task.name }}
                 </a>
+                <form method="POST" action="{% url 'formapp_6:delete' task.id %}" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="submit" value="Usuń">
+                </form>
             </li>
         {% endfor %}
     </ol>
