@@ -8,7 +8,11 @@
     <h3>Zadania do zrealizowania:</h3>
     <ol>
         {% for task in tasks %}
-            <li>{{ task }}</li>
+            <li>
+                <a href="{% url 'formapp_6:update' task.id %}">
+                    {{ task.name }}
+                </a>
+            </li>
         {% endfor %}
     </ol>
 </body>
