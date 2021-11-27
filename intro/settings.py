@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'formapp_6',
     'form_examples',
     'view_examples',
+    'relations',
 ]
 
 MIDDLEWARE = [
