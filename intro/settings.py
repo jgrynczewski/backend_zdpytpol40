@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'form_examples',
     'view_examples',
     'relations',
+    'auth_user',
 ]
 
 MIDDLEWARE = [

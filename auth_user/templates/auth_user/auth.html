@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if request.user.is_authenticated %}
+        Gratulajce, zalogowałeś się jako {{ request.user }}
+    {% else %}
+        Nie jesteś zalogowany.
+        <p>{{ request.user }}</p>
+    {% endif %}
+</body>
+</html>

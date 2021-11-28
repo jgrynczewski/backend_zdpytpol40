@@ -40,3 +40,18 @@ class Movie(models.Model):
 class Character(models.Model):
     name = models.CharField(max_length=128)
     movies = models.ManyToManyField(Movie)
+
+
+class Car(models.Model):
+    year = models.IntegerField()
+    model = models.CharField(max_length=128)
+
+
+class CarAdvertisement(models.Model):
+    title = models.CharField(max_length=256)
+    added = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+    car = models.ForeignKey(
+        'car',
+        on_delete=models.CASCADE
+    )
